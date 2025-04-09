@@ -36,7 +36,7 @@ def generate_linkedin_post(topic, tone, hashtags, emojis):
 
     try:
         openai.api_key = openai_api_key
-        response = openai.Chat.Completion.create(
+        response = openai.chat.completion.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
