@@ -1,0 +1,11 @@
+# Ignore credentials
+*.json
+*.env
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore VSCode or IDE settings
+.vscode/
+.idea/
