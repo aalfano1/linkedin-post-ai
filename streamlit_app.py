@@ -36,13 +36,13 @@ def generate_linkedin_post(topic, tone, hashtags, emojis):
 
     try:
         openai.api_key = openai_api_key
-        response = openai.ChatCompletion.create(
+        response = openai.Chat.Completion.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
             max_tokens=300,
         )
-        return response.choices[0].message["content"]
+        return response.choices[0].message.content#["content"]
     except Exception as e:
         return f"⚠️ Error: {e}"
 
